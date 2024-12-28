@@ -53,13 +53,13 @@ def metta_seralizer(metta_result):
         atoms = d.get_children()
         for atom in atoms:
             if (type(atom) == ExpressionAtom):
-                d = atom.get_children()
-                source_atom = d[1].get_children()
-                target_atom = d[2].get_children()
+                expr = atom.get_children()
+                source_atom = expr[1].get_children()
+                target_atom = expr[2].get_children()
                 source = f"{metta.parse_single(f"{source_atom[0]}")} {metta.parse_single(f"{source_atom[1]}")}"
                 target = f"{metta.parse_single(f"{target_atom[0]}")} {metta.parse_single(f"{target_atom[1]}")}"
                 dict = {
-                    'edge': d[0],
+                    'edge': expr[0],
                     'source': source,
                     'target': target
                     }
@@ -71,7 +71,7 @@ def metta_seralizer(metta_result):
 
 #1
 transcript_result= (get_transcript(['gene ENSG00000166913']))
-# print(transcript_result)
+print(transcript_result)
 """
 Expected Output Format::
 # [[(, (transcribed_to (gene ENSG00000166913) (transcript ENST00000372839))), (, (transcribed_to (gene ENSG00000166913) (transcript ENST00000353703)))]]
@@ -79,7 +79,7 @@ Expected Output Format::
 
 # 2
 protein_result= (get_protein(['gene ENSG00000166913']))
-# print(protein_result) 
+print(protein_result) 
 """
 Expected Output Format::
 # [[(, (translates_to (transcript ENST00000353703) (protein P31946))), (, (translates_to (transcript ENST00000372839) (protein P31946)))]]
