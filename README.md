@@ -1,34 +1,17 @@
-# meTTa_Training
+# meTTa_Training -- Parsing Metta atoms in python
 
-**Set Up:**
+### Tasks
+1. Querying Single Relationship
 
-Method 1:
+2. Querying Multiple Relationships
 
-**Set Up the Virtual Environment**:
+3. Formating output using parsing
 
-    ```sh
-    python -m venv venv
-    source venv/bin/activate
-    ```
-   ```sh
-   pip install -r requirements.txt
-   ```
+## 📒
+-- *dict_format.py* is just what i was experimenting with. Passed the retun value as a string and parsed the output
 
-Method 2:
-
-**Set up Docker**:
-```sh
-docker build -t metta-app .
-docker run -it --rm -v ${PWD}:/app metta-app
-```
-
-3. **Links**:
-   
-1) https://metta-lang.dev/docs/learn/tutorials/eval_intro/main_concepts.html
-2) https://metta-lang.dev/docs/learn/tutorials/ground_up/query_knowledge.html
-3) https://metta-lang.dev/docs/learn/tutorials/python_use/intro.html
-4) https://github.com/trueagi-io/hyperon-experimental/blob/main/python/hyperon/atoms.py#L10
+the correct version is found in the *main.py* works just fine.
 
 
 
-
+Thanks!
